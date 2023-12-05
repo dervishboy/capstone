@@ -1,0 +1,24 @@
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "name" : "test",
+    "description": "test",
+    "tutorial": "test",
+    "videoTutorialLink": "test",
+    "targetMuscles": "test"
+}
+###
+PUT http://localhost:3000/1
+Content-Type: application/json
+
+{
+    "name" : "asiufaif",
+    "description": "asdad",
+    "tutorial": "dsjoiaf",
+    "videoTutorialLink": "ashfoia",
+    "targetMuscles": "qweqrq"
+}
+
+###
+DELETE http://localhost:3000/6
