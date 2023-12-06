@@ -1,24 +1,29 @@
-POST http://localhost:3000/
+POST http://localhost:3000/equipment/
 Content-Type: application/json
 
 {
+    "equipmentImage": "test",
     "name" : "test",
     "description": "test",
     "tutorial": "test",
     "videoTutorialLink": "test",
-    "targetMuscles": "test"
+    "targetMuscles": ["test", "test2"]
 }
 ###
-PUT http://localhost:3000/1
+GET http://localhost:3000/equipment/1
+
+###
+PUT http://localhost:3000/equipment/3
 Content-Type: application/json
 
 {
+    "equipmentImage": "test",
     "name" : "asiufaif",
     "description": "asdad",
     "tutorial": "dsjoiaf",
     "videoTutorialLink": "ashfoia",
-    "targetMuscles": "qweqrq"
+    "targetMuscles": ["test", "test2"]
 }
 
 ###
-DELETE http://localhost:3000/6
+DELETE http://localhost:3000/equipment/4

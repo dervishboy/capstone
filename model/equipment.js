@@ -8,6 +8,9 @@ const Equipment = db.define('equipment', {
         primaryKey: true,
         autoIncrement: true,
     },
+    equipmentImage: {
+        type: DataTypes.STRING,
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -22,7 +25,7 @@ const Equipment = db.define('equipment', {
         type: DataTypes.STRING,
     },
     targetMuscles: {
-        type: DataTypes.STRING,
+        type: DataTypes.ARRAY(DataTypes.STRING),
     },
 });
 

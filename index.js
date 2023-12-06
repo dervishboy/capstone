@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // require('./route/equipment.route.js')(app)
-app.use(router)
+app.use('/equipment', router)
 
 
 
@@ -19,7 +19,7 @@ try {
     db.authenticate();
     console.log('Database Connected');
 
-    // await Equipment.sync();
+    // await Equipment.sync({force: true});
 } catch (error) {
     console.log(error);
 }

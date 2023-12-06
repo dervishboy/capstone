@@ -1,10 +1,11 @@
 import Equipment from "../model/equipment.js";
 
 export const createEquipment = async (req, res) => {
-    const { name, description, tutorial, videoTutorialLink, targetMuscles } = req.body;
+    const { equipmentImage, name, description, tutorial, videoTutorialLink, targetMuscles } = req.body;
 
     try {
         const newEquipment = await Equipment.create({
+            equipmentImage: equipmentImage,
             name: name,
             description: description,
             tutorial: tutorial,
@@ -30,9 +31,26 @@ export const getAllEquipment = async (req, res) => {
     }
 };
 
+export const getEquipmentById = async (req, res) => {
+    const equipmentId = req.params.id;
+
+    try {
+        const equipment = await Equipment.findByPk(equipmentId);
+
+        if (!equipment) {
+            return res.status(404).json({ message: 'Equipment not found' });
+        }
+
+        res.json(equipment);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
 export const updateEquipment = async (req, res) => {
     const equipmentId = req.params.id;
-    const { name, description, tutorial, videoTutorialLink, targetMuscles } = req.body;
+    const { equipmentImage, name, description, tutorial, videoTutorialLink, targetMuscles } = req.body;
 
     try {
         const existingEquipment = await Equipment.findByPk(equipmentId);
@@ -43,6 +61,7 @@ export const updateEquipment = async (req, res) => {
 
         await existingEquipment.update( 
             {
+            equipmentImage,
             name,
             description,
             tutorial,
