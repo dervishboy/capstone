@@ -1,8 +1,8 @@
 import db from './config/database.js'
-import Equipment from './model/equipment.js'
+import Equipment from './api/model/equipment.js'
 import bodyParser from 'body-parser';
 import express from 'express'
-import router from './route/equipment.route.js';
+import router from './api/route/equipment.route.js';
 
 const app = express();
 const port = 3000
@@ -11,8 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // require('./route/equipment.route.js')(app)
-app.use('/equipment', router)
-
+app.use(router)
 
 
 try {
