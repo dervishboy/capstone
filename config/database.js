@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('capstone', 'postgres', 'justkidd1234', {
-    host : 'localhost',
-    dialect : 'postgres'
-})
+const db = new Sequelize("capstone", "postgres", "root", {
+  host: "localhost",
+  dialect: "postgres",
+});
 
 export default db;
