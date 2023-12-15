@@ -1,4 +1,5 @@
 import Equipment from "../model/equipment.js";
+import TargetMuscle from "../model/targetMuscle.js";
 import { Op } from "sequelize";
 
 export const createEquipment = async (req, res) => {
@@ -18,8 +19,19 @@ export const createEquipment = async (req, res) => {
       description: description,
       tutorial: tutorial,
       videoTutorialLink: videoTutorialLink,
-      targetMuscles: targetMuscles,
     });
+
+    if (targetMuscles && targetMuscles.length > 0) {
+      const muscles = await TargetMuscle.findAll({
+        where: {
+          targetMuscleName: {
+            [Op.in]: targetMuscles,
+          },
+        },
+      });
+
+      await newEquipment.setMuscles(muscles);
+    }
 
     res.json(newEquipment);
   } catch (error) {
@@ -31,9 +43,15 @@ export const createEquipment = async (req, res) => {
   }
 };
 
+
 export const getAllEquipment = async (req, res) => {
   try {
-    const equipment = await Equipment.findAll();
+    const equipment = await Equipment.findAll({
+      include: {
+        model: TargetMuscle,
+        as: 'muscles',
+      },
+    });
     res.json(equipment);
   } catch (error) {
     console.error(error);
@@ -49,7 +67,12 @@ export const getEquipmentById = async (req, res) => {
   }
 
   try {
-    const equipment = await Equipment.findByPk(equipmentId);
+    const equipment = await Equipment.findByPk(equipmentId, {
+      include: {
+        model: TargetMuscle,
+        as: 'muscles',
+      },
+    });
 
     if (!equipment) {
       return res.status(404).json({ message: "Equipment not found" });
@@ -86,8 +109,17 @@ export const updateEquipment = async (req, res) => {
       description,
       tutorial,
       videoTutorialLink,
-      targetMuscles,
     });
+
+    if (targetMuscles && targetMuscles.length > 0) {
+      const muscles = await TargetMuscle.findAll({
+        where: { name: targetMuscles },
+      });
+
+      await existingEquipment.setTargetMuscles(muscles);
+    } else {
+      await existingEquipment.setTargetMuscles([]);
+    }
 
     res.json(existingEquipment);
   } catch (error) {
@@ -142,6 +174,10 @@ export const searchEquipment = async (req, res) => {
     const equipment = await Equipment.findAll({
       where: query,
       order: order,
+      include: {
+        model: TargetMuscle,
+        as: 'muscles',
+      },
     });
 
     res.json(equipment);

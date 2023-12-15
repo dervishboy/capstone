@@ -7,10 +7,10 @@ Content-Type: application/json
     "description": "test",
     "tutorial": "test",
     "videoTutorialLink": "test",
-    "targetMuscles": ["test", "test2"]
+    "targetMuscles": ["test1", "test2"]
 }
 ###
-GET http://localhost:3000/1
+GET http://localhost:3000/12
 
 ###
 PUT http://localhost:3000/3
@@ -27,3 +27,6 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/4
+
+
+###

@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 // import Sequelize from "sequelize";
 import db from "../../config/database.js";
+import TargetMuscle from "./targetMuscle.js";
 
 const Equipment = db.define('equipment', {
     equipmentId: {
@@ -24,9 +25,9 @@ const Equipment = db.define('equipment', {
     videoTutorialLink: {
         type: DataTypes.STRING,
     },
-    targetMuscles: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-    },
 });
+
+Equipment.belongsToMany(TargetMuscle, { through: 'equipmentTargetMuscles', as : 'muscles' });
+TargetMuscle.belongsToMany(Equipment, { through: 'equipmentTargetMuscles', as : 'equipment' });
 
 export default Equipment;

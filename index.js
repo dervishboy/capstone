@@ -13,12 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require('./route/equipment.route.js')(app)
 app.use(router)
 
-
+    3
 try {
     db.authenticate();
     console.log('Database Connected');
 
-    // await Equipment.sync({force: true});
+    // await db.sync({force: true});
 } catch (error) {
     console.log(error);
 }
