@@ -22,7 +22,7 @@ export const createEquipment = async (req, res) => {
     });
 
     if (targetMuscles && targetMuscles.length > 0) {
-      const muscles = await TargetMuscle.findAll({
+      const muscles = await targetMuscle.findAll({
         where: {
           targetMuscleName: {
             [Op.in]: targetMuscles,
@@ -48,7 +48,7 @@ export const getAllEquipment = async (req, res) => {
   try {
     const equipment = await Equipment.findAll({
       include: {
-        model: TargetMuscle,
+        model: targetMuscle,
         as: 'muscles',
       },
     });
@@ -69,7 +69,7 @@ export const getEquipmentById = async (req, res) => {
   try {
     const equipment = await Equipment.findByPk(equipmentId, {
       include: {
-        model: TargetMuscle,
+        model: targetMuscle,
         as: 'muscles',
       },
     });
@@ -112,7 +112,7 @@ export const updateEquipment = async (req, res) => {
     });
 
     if (targetMuscles && targetMuscles.length > 0) {
-      const muscles = await TargetMuscle.findAll({
+      const muscles = await targetMuscle.findAll({
         where: { name: targetMuscles },
       });
 
@@ -160,7 +160,7 @@ export const searchEquipment = async (req, res) => {
     }
 
     if (muscleTypes) {
-      const muscles = await TargetMuscle.findAll({
+      const muscles = await targetMuscle.findAll({
         where: { targetMuscleName: { [Op.in]: muscleTypes.split(",") } },
       });
 
@@ -180,7 +180,7 @@ export const searchEquipment = async (req, res) => {
     const equipment = await Equipment.findAll({
       where: query,
       order: order,
-      include: TargetMuscle,
+      include: targetMuscle,
     });
 
     res.json(equipment);

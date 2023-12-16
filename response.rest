@@ -10,7 +10,7 @@ Content-Type: application/json
     "targetMuscles": ["test1", "test2"]
 }
 ###
-GET http://localhost:3000/12
+GET http://localhost:3000/equipment/1
 
 ###
 PUT http://localhost:3000/3
