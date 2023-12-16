@@ -30,3 +30,4 @@ DELETE http://localhost:3000/4
 
 
 ###
+GET http://localhost:3000/muscles

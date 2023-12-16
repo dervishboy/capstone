@@ -6,15 +6,17 @@ import {
   getEquipmentById,
   updateEquipment,
   searchEquipment,
+  getAllTargetMuscles,
 } from "../controller/equipment.controller.js";
 
 const router = express.Router();
 
 router.get("/search", searchEquipment);
-router.post("/", createEquipment);
-router.get("/", getAllEquipment);
-router.get("/:id", getEquipmentById);
-router.put("/:id", updateEquipment);
-router.delete("/:id", deleteEquipment);
+router.post("/equipment", createEquipment);
+router.get("/equipment", getAllEquipment);
+router.get("/equipment/:id", getEquipmentById);
+router.put("/equipment/:id", updateEquipment);
+router.delete("/equipment/:id", deleteEquipment);
+router.get("/muscles", getAllTargetMuscles);
 
 export default router;

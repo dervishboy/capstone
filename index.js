@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require('./route/equipment.route.js')(app)
 app.use(router)
 
-    3
 try {
     db.authenticate();
     console.log('Database Connected');

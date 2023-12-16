@@ -1,5 +1,5 @@
 import Equipment from "../model/equipment.js";
-import TargetMuscle from "../model/targetMuscle.js";
+import targetMuscle from "../model/targetMuscle.js";
 import { Op } from "sequelize";
 
 export const createEquipment = async (req, res) => {
@@ -160,7 +160,13 @@ export const searchEquipment = async (req, res) => {
     }
 
     if (muscleTypes) {
-      query.targetMuscles = { [Op.contains]: muscleTypes.split(",") };
+      const muscles = await TargetMuscle.findAll({
+        where: { targetMuscleName: { [Op.in]: muscleTypes.split(",") } },
+      });
+
+      const equipmentIds = muscles.map((muscle) => muscle.equipmentId);
+
+      query.equipmentId = { [Op.in]: equipmentIds };
     }
 
     let order = [];
@@ -174,10 +180,7 @@ export const searchEquipment = async (req, res) => {
     const equipment = await Equipment.findAll({
       where: query,
       order: order,
-      include: {
-        model: TargetMuscle,
-        as: 'muscles',
-      },
+      include: TargetMuscle,
     });
 
     res.json(equipment);
@@ -186,3 +189,14 @@ export const searchEquipment = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+
+export const getAllTargetMuscles = async (req, res) => {
+  try {
+    const muscles = await targetMuscle.findAll();
+    res.json(muscles);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}
