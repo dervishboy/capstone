@@ -43,13 +43,12 @@ export const createEquipment = async (req, res) => {
   }
 };
 
-
 export const getAllEquipment = async (req, res) => {
   try {
     const equipment = await Equipment.findAll({
       include: {
         model: targetMuscle,
-        as: 'muscles',
+        as: "muscles",
       },
     });
     res.json(equipment);
@@ -70,7 +69,7 @@ export const getEquipmentById = async (req, res) => {
     const equipment = await Equipment.findByPk(equipmentId, {
       include: {
         model: targetMuscle,
-        as: 'muscles',
+        as: "muscles",
       },
     });
 
@@ -159,16 +158,6 @@ export const searchEquipment = async (req, res) => {
       query.name = { [Op.iLike]: `%${q}%` };
     }
 
-    if (muscleTypes) {
-      const muscles = await targetMuscle.findAll({
-        where: { targetMuscleName: { [Op.in]: muscleTypes.split(",") } },
-      });
-
-      const equipmentIds = muscles.map((muscle) => muscle.equipmentId);
-
-      query.equipmentId = { [Op.in]: equipmentIds };
-    }
-
     let order = [];
 
     if (sort === "asc") {
@@ -177,10 +166,17 @@ export const searchEquipment = async (req, res) => {
       order.push(["name", "DESC"]);
     }
 
+    if (muscleTypes) {
+      const muscleNames = muscleTypes.split(",");
+      query["$muscles.targetMuscleName$"] = {
+        [Op.iLike]: { [Op.any]: muscleNames.map((name) => `%${name}%`) },
+      };
+    }
+
     const equipment = await Equipment.findAll({
       where: query,
       order: order,
-      include: targetMuscle,
+      include: { model: targetMuscle, as: "muscles" },
     });
 
     res.json(equipment);
@@ -190,7 +186,6 @@ export const searchEquipment = async (req, res) => {
   }
 };
 
-
 export const getAllTargetMuscles = async (req, res) => {
   try {
     const muscles = await targetMuscle.findAll();
@@ -199,4 +194,4 @@ export const getAllTargetMuscles = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
-}
+};
