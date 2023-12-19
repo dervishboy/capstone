@@ -11,6 +11,10 @@ import {
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("Welcome!");
+});
+
 router.get("/search", searchEquipment);
 router.post("/equipment", createEquipment);
 router.get("/equipment", getAllEquipment);

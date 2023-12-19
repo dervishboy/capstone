@@ -20,7 +20,7 @@ const Equipment = db.define('equipment', {
         type: DataTypes.TEXT,
     },
     tutorial: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
+        type: DataTypes.ARRAY(DataTypes.TEXT),
     },
     videoTutorialLink: {
         type: DataTypes.STRING,
