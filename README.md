@@ -38,6 +38,11 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 - **Data Types:** float32
 - **Source Code:** Capstone_Tutorin_CNN.ipynb
 
+**ML FLOWCHART:**
+<div style ="display:flex;" align="center">
+  <img src="https://drive.google.com/uc?id=1MwIf_7hEAAUYkxy6bUZ-RuvK3uAyNwka" style="width:550px"/>
+</div>
+
 **Steps to Build our Tutorin App:**
 - Like this Repository (built during the Capstone Project period)
   - First, download (as a .zip) / fork this Repository.
