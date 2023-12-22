@@ -16,14 +16,7 @@
 - MD  •  Indra Niko Saputra  •  A200BSY2448
 
 ### Description
-The "Tutorin" application simplifies accessing information about specific items, activities, and tutorials for their use or consumption, making learning easier. For example:
-- Tutorials on using Gym/Fitness equipment
-- Tutorials on how to consume certain medications
-- Tutorials on how to consume specific types of food
-
-The primary feature is the Image Classifier. Just take a photo of Gym Equipment / Medicine / Particular Food, and "Tutorin" will detect the object and provide guidance on its use or consumption.
-
-During the Capstone Project, we focused on developing the "Tutor for Using Gym/Fitness Equipment."
+We aim to make Tutorin known for its simplicity and ease of use, providing a complete and detailed source of informations about Tutorials. Our main focus is on delivering easily accessible tutorials on a wide range of topics, especially in the field of Healthcare. But, for starters, we will maximally improve the "Tutor" feature in the field of Gym / Fitness first. The primary feature (for now) is the Gym Equipments Classifier. Just take a photo of any Gym Equipments, and "Tutorin" will detect the object and provide guidance on how to use the Gym Equipment.
 
 ### Details
 **App Name:** Tutorin
