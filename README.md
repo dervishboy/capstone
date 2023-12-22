@@ -40,14 +40,14 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 
 **ML Model Development Flowchart:**
 <div style ="display:flex;">
-  <img src="https://drive.google.com/uc?id=1MwIf_7hEAAUYkxy6bUZ-RuvK3uAyNwka" style="width:550px"/>
+  <img src="https://drive.google.com/uc?id=1MwIf_7hEAAUYkxy6bUZ-RuvK3uAyNwka" style="width:650px"/>
 </div>
 
 <br>
 
 **Tutorin Flowchart:**
 <div style ="display:flex;">
-  <img src="https://drive.google.com/uc?id=1KopB8dUyVeZnnwyLU6DktdNIBj-HcuHg" style="width:550px"/>
+  <img src="https://drive.google.com/uc?id=1KopB8dUyVeZnnwyLU6DktdNIBj-HcuHg" style="width:650px"/>
 </div>
 
 <br>
