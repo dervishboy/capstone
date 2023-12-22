@@ -38,27 +38,17 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 - **Data Types:** float32
 - **Source Code:** Capstone_Tutorin_CNN.ipynb
 
-**ML FLOWCHART:**
+**ML Model Development Flowchart:**
 <div style ="display:flex;" align="center">
   <img src="https://drive.google.com/uc?id=1MwIf_7hEAAUYkxy6bUZ-RuvK3uAyNwka" style="width:550px"/>
 </div>
 
-**Steps to Build our Tutorin App:**
-- Like this Repository (built during the Capstone Project period)
-  - First, download (as a .zip) / fork this Repository.
-  
-**ML Steps:**
-- Download the Capstone_Tutorin_CNN.ipynb file.
-  - Location: model/Capstone_Tutorin_CNN.ipynb
-- Open Google Colab
-- Install necessary Python libraries if not installed (latest version):
-  - tensorflow, pandas, numpy, matplotlib, pillow
-  - Install them using "!pip install", for example: `!pip install tensorflow`
+**Tutorin Flowchart:**
+<div style ="display:flex;" align="center">
+  <img src="https://drive.google.com/file/d/1KopB8dUyVeZnnwyLU6DktdNIBj-HcuHg/view?usp=sharing" style="width:550px"/>
+</div>
 
-**CC Steps:** 
-- No specific steps provided yet.
-
-**MD Steps:** 
+**How to run our Tutorin App?**
 - Fork or Clone https://github.com/Niko-Cloud/Tutorin-Android.git
 - Install Android Studio
 - Open the project in Android Studio
