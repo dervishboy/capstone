@@ -29,16 +29,16 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 **App Name:** Tutorin
 
 **ML Details:**
-- **Model Name:** Gym Equipments Classifier
+- **Model Name:** Gym Equipments Classifier v1.1
 - **Model Type:** Image Classifier
-- **Model:** model.tflite
+- **Model File:** <a href="https://drive.google.com/file/d/1FGD9SEHhvgA1H8DH1dyKjqhHOA_1hR5W/view?usp=sharing">model.tflite</a>
 - **Algorithm:** CNN
-- **Dataset Used:** <a href="https://drive.google.com/file/d/1MY8Rwjbhqpo7i9OaTn_3XWv-A62qtVYh/view?usp=sharing" target="_blank">fitness_CNN_binary_5.zip</a>
-- **Dataset Obtained From:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data" target="_blank">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data" target="_blank">gym_equipment</a> (Kaggle Public Dataset)
+- **Dataset Used:** <a href="https://drive.google.com/file/d/1MY8Rwjbhqpo7i9OaTn_3XWv-A62qtVYh/view?usp=sharing">fitness_CNN_binary_5.zip</a>
+- **Dataset Obtained From:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data">gym_equipment</a> (Kaggle Public Dataset)
 - **Classes:** Benchpress, Dumbells
 - **Input Shape:** 200 x 200
 - **Data Types:** float32
-- **Source Code:** Capstone_Tutorin_CNN.ipynb
+- **Source Code:** <a href="https://colab.research.google.com/drive/1iQrTvWXY52ANWjOoOOFHyQTlrQfU2VvV?usp=sharing">Capstone_Tutorin_CNN.ipynb</a>
 
 **ML Model Development Flowchart:**
 <div style ="display:flex;">
