@@ -45,7 +45,7 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 
 **Tutorin Flowchart:**
 <div style ="display:flex;" align="center">
-  <img src="https://drive.google.com/file/d/1KopB8dUyVeZnnwyLU6DktdNIBj-HcuHg/view?usp=sharing" style="width:550px"/>
+  <img src="https://drive.google.com/uc?id=1KopB8dUyVeZnnwyLU6DktdNIBj-HcuHg" style="width:550px"/>
 </div>
 
 **How to run our Tutorin App?**
