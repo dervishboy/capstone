@@ -31,7 +31,7 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 **ML Details:**
 - **Model Name:** Gym Equipments Classifier v1.1
 - **Model Type:** Image Classifier
-- **Model File:** <a href="https://drive.google.com/file/d/1FGD9SEHhvgA1H8DH1dyKjqhHOA_1hR5W/view?usp=sharing">model.tflite</a>
+- **Model File:** <a href="https://drive.google.com/file/d/1FGD9SEHhvgA1H8DH1dyKjqhHOA_1hR5W/view?usp=sharing">Gym_Equipments_Classifier_v1.1.tflite</a>
 - **Algorithm:** CNN
 - **Dataset Used:** <a href="https://drive.google.com/file/d/1MY8Rwjbhqpo7i9OaTn_3XWv-A62qtVYh/view?usp=sharing">fitness_CNN_binary_5.zip</a>
 - **Dataset Obtained From:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data">gym_equipment</a> (Kaggle Public Dataset)
