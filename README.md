@@ -29,10 +29,11 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 **App Name:** Tutorin
 
 **ML Details:**
+- **Model Name:** Gym Equipments Classifier
 - **Model Type:** Image Classifier
 - **Model:** model.tflite
 - **Algorithm:** CNN
-- **Dataset:** fitness.zip
+- **Dataset:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data">gym_equipment</a>
 - **Classes:** Benchpress, Dumbells
 - **Input Shape:** 200 x 200
 - **Data Types:** float32
