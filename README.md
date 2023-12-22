@@ -33,7 +33,8 @@ During the Capstone Project, we focused on developing the "Tutor for Using Gym/F
 - **Model Type:** Image Classifier
 - **Model:** model.tflite
 - **Algorithm:** CNN
-- **Dataset:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data">gym_equipment</a>
+- **Dataset Used:** <a href="https://drive.google.com/file/d/1MY8Rwjbhqpo7i9OaTn_3XWv-A62qtVYh/view?usp=sharing">fitness_CNN_binary_5.zip</a>
+- **Dataset Obtained From:** <a href="https://www.kaggle.com/datasets/rifqilukmansyah381/gym-equipment-image/data">Gym Equipment Images</a> & <a href="https://www.kaggle.com/datasets/dutt2302/gym-equipment/data">gym_equipment</a> (Kaggle Public Dataset)
 - **Classes:** Benchpress, Dumbells
 - **Input Shape:** 200 x 200
 - **Data Types:** float32
